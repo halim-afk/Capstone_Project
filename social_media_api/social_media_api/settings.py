@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken', # For Token-based authentication
     'users', # Your users app
     'posts', # Posts app
-    'follows', # Follows app
+    #'follows', # Follows app
 ]
 
 MIDDLEWARE = [
