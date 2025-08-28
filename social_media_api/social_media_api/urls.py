@@ -27,6 +27,8 @@ urlpatterns = [
     path('api/users/', include('users.urls')), # Include users app URLs
     path('api/posts/', include('posts.urls')), # Include posts app URLs
     path('api/follows/', include('follows.urls')), # Include follows app URLs
+    path('api/notifications/', include('notifications.urls')), # NEW: Include notifications app URLs
+
 ]
 
 # Serve media files in development
