@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+from decouple import config
 from pathlib import Path
 import os
 from pathlib import Path
@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'social_media_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Changed to MySQL engine
-        'NAME': 'social_media_db',       # Your MySQL database name
-        'USER': 'your_mysql_user',       # Your MySQL username
-        'PASSWORD': 'your_mysql_password', # Your MySQL password
+        'NAME': 'DB_NAME',       # Your MySQL database name
+        'USER': 'DB_USER',       # Your MySQL username
+        'PASSWORD': 'DB_PASSWORD', # Your MySQL password
         'HOST': 'localhost',             # Your database host (e.g., 'localhost', '127.0.0.1', or a remote IP)
         'PORT': '3306',                  # Default MySQL port
         'OPTIONS': {                     # Optional: for specific MySQL settings like character set
