@@ -22,13 +22,15 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from .views import home
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/users/', include('users.urls')), # Include users app URLs
     path('api/posts/', include('posts.urls')), # Include posts app URLs
     path('api/follows/', include('follows.urls')), # Include follows app URLs
     path('api/notifications/', include('notifications.urls')), # NEW: Include notifications app URLs
-
+    path('', home, name='home'),
 ]
 
 # Serve media files in development

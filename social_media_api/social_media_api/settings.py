@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'social_media_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Changed to MySQL engine
-        'NAME': 'DB_NAME',       # Your MySQL database name
-        'USER': 'DB_USER',       # Your MySQL username
-        'PASSWORD': 'DB_PASSWORD', # Your MySQL password
+        'NAME': config('DB_NAME'),       # Your MySQL database name
+        'USER': config('DB_USER'),       # Your MySQL username
+        'PASSWORD': config('DB_PASSWORD'), # Your MySQL password
         'HOST': 'localhost',             # Your database host (e.g., 'localhost', '127.0.0.1', or a remote IP)
         'PORT': '3306',                  # Default MySQL port
         'OPTIONS': {                     # Optional: for specific MySQL settings like character set
