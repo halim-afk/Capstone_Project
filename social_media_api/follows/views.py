@@ -6,12 +6,12 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.exceptions import ValidationError # For custom validation errors
 from rest_framework.generics import ListAPIView # For the feed
 from django.db.models import Q # Import Q for feed filtering (optional stretch goal)
-
+from .models import Follow
 from users.models import CustomUser # Import CustomUser to filter users for feed
 from posts.models import Post # Import Post to get posts for the feed
 from posts.serializers import PostSerializer # To serialize posts for the feed
 from notifications.models import Notification # NEW: Import Notification model
-
+from .serializers import FollowSerializer  
 # ViewSet for Follow operations (Create/Destroy)
 class FollowViewSet(
     mixins.CreateModelMixin, # Allows POST (create)

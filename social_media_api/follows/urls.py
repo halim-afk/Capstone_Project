@@ -1,7 +1,11 @@
 # follows/urls.py
-from django.urls import path
+from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import FollowViewSet, FeedView
+
+router = DefaultRouter()
+router.register(r'follows', FollowViewSet)
+
 
 # Router for FollowViewSet (for create/destroy of follows)
 router = DefaultRouter()
